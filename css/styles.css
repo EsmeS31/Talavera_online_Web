@@ -1,0 +1,586 @@
+/* --------------------
+   CASA TALAVERA WEBSITE
+   Main CSS file
+-------------------- */
+
+/* These are the colors used throughout the website. */
+:root {
+  --white: #fefefe;
+  --light-blue: #e7e9f0;
+  --dark-blue: #051747;
+  --medium-blue: #535f80;
+  --deep-blue: #081f62;
+}
+
+/* Remove the browser's default spacing. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--white);
+  color: var(--dark-blue);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Make links use the same color as nearby text. */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* This keeps page content from becoming too wide. */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Hide this link until someone uses a keyboard to navigate. */
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+
+.skip-link:focus {
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background-color: var(--white);
+}
+
+/* --------------------
+   HEADER AND NAVIGATION
+-------------------- */
+
+.site-header {
+  border-bottom: 1px solid var(--light-blue);
+  background-color: var(--white);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo em {
+  color: var(--medium-blue);
+}
+
+.logo-mark {
+  color: var(--deep-blue);
+}
+
+.site-nav {
+  display: flex;
+  gap: 25px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.site-nav a:hover {
+  color: var(--medium-blue);
+}
+
+.cart-link {
+  border-left: 1px solid var(--light-blue);
+  padding-left: 25px;
+}
+
+/* This button will be used for the mobile menu with JavaScript later. */
+.menu-button {
+  display: none;
+  border: none;
+  background: none;
+}
+
+/* --------------------
+   HERO SECTION
+-------------------- */
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+
+  /* The first background is a white overlay. The second is the image. */
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(254, 254, 254, 0.96),
+      rgba(254, 254, 254, 0.35)
+    ),
+    url("../images/talavera-hero.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* The text stays on the left side of the hero image. */
+.hero-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.eyebrow {
+  margin-bottom: 10px;
+  color: var(--medium-blue);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-family: Georgia, serif;
+  line-height: 1.1;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 70px;
+}
+
+h1 em {
+  color: var(--deep-blue);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 42px;
+}
+
+.hero-copy {
+  max-width: 480px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* --------------------
+   FEATURED CAROUSEL
+-------------------- */
+.featured {
+  padding: 90px 0;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.carousel-slides {
+  flex: 1;
+}
+
+/* JavaScript adds active-slide to the one slide that should be visible. */
+.carousel-slide {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--light-blue);
+}
+
+.carousel-slide.active-slide {
+  display: grid;
+}
+
+.carousel-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  color: var(--white);
+  font-family: Georgia, serif;
+  font-size: 24px;
+}
+
+.carousel-plate {
+  background-color: var(--dark-blue);
+}
+
+.carousel-planter {
+  background-color: var(--medium-blue);
+}
+
+.carousel-bowl {
+  background-color: var(--deep-blue);
+}
+
+.carousel-text {
+  padding: 35px;
+}
+
+.carousel-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.carousel-status {
+  text-align: center;
+  color: var(--medium-blue);
+}
+
+/* --------------------
+   BUTTONS AND LINKS
+-------------------- */
+
+.button {
+  display: inline-block;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.button-primary {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.button-primary:hover {
+  background-color: var(--medium-blue);
+}
+
+.button-outline {
+  border: 1px solid var(--dark-blue);
+  color: var(--dark-blue);
+}
+
+.button-outline:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.text-link {
+  color: var(--medium-blue);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.text-link:hover {
+  color: var(--dark-blue);
+}
+
+/* --------------------
+   STORY SECTION
+-------------------- */
+
+.intro {
+  padding: 100px 0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* --------------------
+   PRODUCT SECTION
+-------------------- */
+
+.collection {
+  padding: 90px 0;
+  background-color: var(--light-blue);
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.show-all-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.catalog-controls {
+  margin-bottom: 30px;
+}
+
+.catalog-controls label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.catalog-controls input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border: 1px solid var(--medium-blue);
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.filter-button {
+  padding: 8px 12px;
+  border: 1px solid var(--dark-blue);
+  background-color: var(--white);
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.selected-filter {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  cursor: pointer;
+}
+
+.product-card[hidden] {
+  display: none;
+}
+
+.no-products {
+  font-weight: bold;
+}
+
+.product-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  background-color: var(--white);
+  color: var(--medium-blue);
+}
+
+/* These colors are placeholders until real product photos are added. */
+.blue-flower {
+  background-color: var(--white);
+  border: 12px solid var(--deep-blue);
+}
+
+.sun-flower {
+  background-color: var(--light-blue);
+  border: 12px solid var(--medium-blue);
+}
+
+.red-flower {
+  background-color: var(--white);
+  border: 12px solid var(--dark-blue);
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+
+.product-info h3,
+.product-info p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.product-info p {
+  color: var(--medium-blue);
+  font-weight: bold;
+}
+
+/* --------------------
+   TALAVERA PROCESS SECTION
+-------------------- */
+
+.art-section {
+  padding: 100px 0;
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.art-image {
+  min-height: 420px;
+  background-color: var(--dark-blue);
+  border: 18px solid var(--light-blue);
+}
+
+.art-copy {
+  align-self: center;
+}
+
+/* --------------------
+   NEWSLETTER AND FOOTER
+-------------------- */
+
+.newsletter {
+  padding: 60px 0;
+  background-color: var(--deep-blue);
+  color: var(--white);
+}
+
+.newsletter .eyebrow {
+  color: var(--light-blue);
+}
+
+.newsletter-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  font-size: 14px;
+}
+
+.contact-form .button {
+  align-self: flex-start;
+}
+
+.form-message {
+  min-height: 24px;
+}
+
+.form-message.success-message {
+  color: #d3f4dc;
+}
+
+.site-footer {
+  padding: 35px 0;
+  border-top: 1px solid var(--light-blue);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+/* --------------------
+   MOBILE STYLES
+-------------------- */
+
+@media (max-width: 700px) {
+  .site-nav {
+    display: none;
+  }
+
+  /* JavaScript adds this class when the menu button is clicked. */
+  .site-nav.is-open {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 25px 5%;
+    background-color: var(--white);
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .hero {
+    min-height: 580px;
+    background-position: 60% center;
+  }
+
+  .intro-grid,
+  .art-grid,
+  .newsletter-content,
+  .product-grid,
+  .carousel-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel {
+    gap: 8px;
+  }
+
+  .carousel-text {
+    padding: 25px;
+  }
+
+  .intro-grid,
+  .art-grid,
+  .newsletter-content {
+    gap: 30px;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading .text-link {
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .email-form {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

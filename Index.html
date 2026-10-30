@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Talavera pottery and hand-painted ceramics from Puebla, Mexico."
+    />
+    <title>Casa Talavera | Hand-painted Mexican Ceramics</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="logo" href="#home" aria-label="Casa Talavera home">
+          <span class="logo-mark" aria-hidden="true">✦</span>
+          <span>Casa <em>Talavera</em></span>
+        </a>
+
+        <!-- Add JavaScript later to open and close the mobile menu. -->
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#shop">Shop</a>
+          <a href="#story">Our Story</a>
+          <a href="#process">The Art</a>
+          <a href="#contact">Contact</a>
+          <a class="cart-link" href="#cart">Bag <span>(0)</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="home">
+        <div class="container hero-content">
+          <p class="eyebrow">Hand-painted in Puebla, Mexico</p>
+
+          <h1>
+            Made by hand.<br />
+            <em>Meant for home.</em>
+          </h1>
+
+          <p class="hero-copy">
+            Colorful Talavera ceramics that carry centuries of artistry from
+            our family to yours.
+          </p>
+
+          <a class="button button-primary" href="#shop">
+            Explore the collection
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="hero-pattern" aria-hidden="true"></div>
+      </section>
+
+      <section class="intro container" id="story">
+        <p class="eyebrow">What is Talavera?</p>
+
+        <div class="intro-grid">
+          <h2>From clay to color, made slowly.</h2>
+
+          <div>
+            <p>
+              Talavera is a traditional tin-glazed ceramic art form born in
+              Puebla, Mexico. Each piece is shaped, painted, and finished by
+              hand—so no two are ever exactly alike.
+            </p>
+
+            <a class="text-link" href="#process">
+              Learn more
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAROUSEL: JavaScript changes which product is visible. -->
+      <section class="featured">
+        <div class="container">
+          <p class="eyebrow">Featured collection</p>
+          <h2>Small details, bright moments.</h2>
+
+          <div class="carousel">
+            <button class="carousel-button previous-button" type="button">←</button>
+
+            <div class="carousel-slides">
+              <article class="carousel-slide active-slide">
+                <div class="carousel-image carousel-plate">Talavera Plate</div>
+                <div class="carousel-text">
+                  <p class="eyebrow">Featured piece</p>
+                  <h3>Flor Azul Plate</h3>
+                  <p>A placeholder for a hand-painted Talavera plate.</p>
+                </div>
+              </article>
+
+              <article class="carousel-slide">
+                <div class="carousel-image carousel-planter">Talavera Planter</div>
+                <div class="carousel-text">
+                  <p class="eyebrow">Featured piece</p>
+                  <h3>Sol Planter</h3>
+                  <p>A placeholder for a colorful Talavera planter.</p>
+                </div>
+              </article>
+
+              <article class="carousel-slide">
+                <div class="carousel-image carousel-bowl">Talavera Bowl</div>
+                <div class="carousel-text">
+                  <p class="eyebrow">Featured piece</p>
+                  <h3>Jardín Serving Bowl</h3>
+                  <p>A placeholder for a Talavera serving bowl.</p>
+                </div>
+              </article>
+            </div>
+
+            <button class="carousel-button next-button" type="button">→</button>
+          </div>
+
+          <p class="carousel-status">Showing product 1 of 3</p>
+        </div>
+      </section>
+
+      <section class="collection" id="shop">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Shop Talavera</p>
+              <h2>Bring color to the everyday.</h2>
+            </div>
+
+            <button class="text-link show-all-button" type="button">
+              View all pieces
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <!-- SEARCH AND FILTER CONTROLS -->
+          <div class="catalog-controls">
+            <label for="product-search">Search the catalog</label>
+            <input
+              id="product-search"
+              type="search"
+              placeholder="Search by product name"
+            />
+
+            <div class="filter-buttons">
+              <button class="filter-button selected-filter" type="button" data-filter="all">All</button>
+              <button class="filter-button" type="button" data-filter="tableware">Tableware</button>
+              <button class="filter-button" type="button" data-filter="planters">Planters</button>
+              <button class="filter-button" type="button" data-filter="serveware">Serveware</button>
+            </div>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card" data-category="tableware" data-name="flor azul plate">
+              <div class="product-image blue-flower">
+                <span>Plate image</span>
+              </div>
+
+              <div class="product-info">
+                <h3>Flor Azul Plate</h3>
+                <p>$42.00</p>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="planters" data-name="sol planter">
+              <div class="product-image sun-flower">
+                <span>Planter image</span>
+              </div>
+
+              <div class="product-info">
+                <h3>Sol Planter</h3>
+                <p>$58.00</p>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="serveware" data-name="jardin serving bowl">
+              <div class="product-image red-flower">
+                <span>Bowl image</span>
+              </div>
+
+              <div class="product-info">
+                <h3>Jardín Serving Bowl</h3>
+                <p>$76.00</p>
+              </div>
+            </article>
+          </div>
+
+          <p class="no-products" hidden>No products match your search.</p>
+        </div>
+      </section>
+
+      <section class="art-section" id="process">
+        <div class="container art-grid">
+          <div
+            class="art-image"
+            role="img"
+            aria-label="Decorative Talavera-inspired pattern"
+          ></div>
+
+          <div class="art-copy">
+            <p class="eyebrow">A labor of love</p>
+
+            <h2>Every piece tells a colorful story.</h2>
+
+            <p>
+              Talavera Azul began in Puebla, Mexico.
+              Founded by Saúl Sánchez, whose passion for his culture 
+              inspired him to share the beauty and tradition of 
+              Talavera pottery with others.
+            </p>
+
+            <a class="button button-outline" href="#contact">
+              Meet our story
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter" id="contact">
+        <div class="container newsletter-content">
+          <div>
+            <p class="eyebrow">Contact us</p>
+            <h2>Let’s talk Talavera.</h2>
+            <p>Send us a message with your questions.</p>
+          </div>
+
+          <!-- CONTACT FORM: JavaScript checks that every field is filled out. -->
+          <form class="contact-form" id="contact-form" action="#" method="post" novalidate>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" />
+
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button class="button button-primary" type="submit">Send message</button>
+            <p class="form-message"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a class="logo" href="#home">
+          <span class="logo-mark" aria-hidden="true">✦</span>
+          <span>Casa <em>Talavera</em></span>
+        </a>
+
+        <p>Handmade traditions, shared with love.</p>
+        <p>© 2026 Casa Talavera</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
