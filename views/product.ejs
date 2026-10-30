@@ -1,0 +1,17 @@
+<%- include('partials/header', { title: product.name }) %>
+<main id="main-content" class="product-page"><div class="container">
+  <p class="product-breadcrumb"><a href="/#shop">Shop</a> / <%= product.name %></p>
+  <section class="product-detail">
+    <div class="product-detail-image product-art <%= product.color %>" role="img" aria-label="Placeholder for <%= product.name %>"><span><%= product.placeholder %></span></div>
+    <div class="product-detail-copy">
+      <p class="eyebrow"><%= product.categoryName %></p>
+      <h1><%= product.name %></h1>
+      <p class="product-detail-price">$<%= product.price.toFixed(2) %></p>
+      <p class="product-detail-description"><%= product.description %></p>
+      <p class="product-detail-note">Each piece is hand-painted in Puebla, Mexico. Small variations are part of its handmade character.</p>
+      <button class="button button-primary add-to-cart" type="button" data-product-id="<%= product.id %>">Add to bag</button>
+      <p><a class="text-link" href="/#shop">← Back to all pieces</a></p>
+    </div>
+  </section>
+</div></main>
+<%- include('partials/footer') %>

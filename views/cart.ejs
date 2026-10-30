@@ -1,0 +1,11 @@
+<%- include('partials/header', { title: 'Your shopping bag' }) %>
+<main id="main-content" class="cart-page"><div class="container">
+  <p class="eyebrow">Your selection</p><h1 class="cart-title">Shopping bag</h1><p class="cart-intro">Your handmade favorites, gathered in one place.</p>
+  <div class="cart-layout"><section class="cart-items" aria-label="Items in your shopping bag"><div class="empty-cart" hidden><p>Your bag is waiting for something beautiful.</p><a class="button button-primary" href="/#shop">Explore the collection</a></div><div class="cart-item-list"></div></section>
+    <aside class="order-summary"><h2>Order summary</h2><label for="discount-code">Discount code</label><div class="discount-entry"><input id="discount-code" type="text" placeholder="Enter code" autocomplete="off" /><button id="apply-discount" type="button">Apply</button></div><p class="discount-feedback" aria-live="polite">Try TALAVERA10 for 10% off.</p>
+      <div class="summary-line"><span>Subtotal</span><span id="subtotal">$0.00</span></div><div class="summary-line discount-line" hidden><span>Discount</span><span id="discount-amount">−$0.00</span></div><div class="summary-line"><span>Estimated shipping</span><span id="shipping">$0.00</span></div><div class="summary-line summary-total"><span>Total</span><span id="total">$0.00</span></div>
+      <button class="button button-primary checkout-button" type="button">Continue to checkout</button><p class="checkout-note">Checkout is a project demo. No payment is collected.</p>
+    </aside></div><a class="text-link back-to-shop" href="/#shop">← Continue shopping</a>
+  <script type="application/json" id="products-data"><%- JSON.stringify(products).replace(/</g, '\\u003c') %></script>
+</div></main>
+<%- include('partials/footer') %>
