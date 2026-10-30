@@ -13,7 +13,7 @@ Then open **http://localhost:3000** in a web browser to see the shop. The start 
 
 My purpose for building this software is to grow my skills as a software engineer by learning how a server-side framework handles requests and uses data to generate web pages. I also want to learn how browser interactions and saved cart data can make an online shop useful to customers and a small business.
 
-**YouTube demonstration:** 
+[Software Demo Video](https://youtu.be/_krr-XDNRwM)
 
 # Web Pages
 
