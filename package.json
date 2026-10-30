@@ -1,0 +1,20 @@
+{
+  "name": "casa-talavera-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A server-rendered Talavera ceramics shop built with Express and TypeScript",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node server.js",
+    "dev": "npm run build && node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.30",
+    "typescript": "^5.8.3"
+  }
+}
